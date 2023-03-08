@@ -1,8 +1,9 @@
 class Customer:
-    def __init__(self, name, wallet):
+    def __init__(self, name, wallet, age):
         self.name = name
         self.wallet = wallet
         self.drinks = []
+        self.age = age
 
     def add_drink(self, drink_to_buy):
         self.drinks.append(drink_to_buy)
@@ -15,3 +16,6 @@ class Customer:
     
     def reduce_wallet(self, amount):
         self.wallet -= amount
+
+    def check_customer_age(self):
+        return self.age

@@ -13,8 +13,16 @@ class Pub:
     def add_to_till(self, drink):
         self.till += drink.price
 
+
     def sell_drink(self, customer, drink):
         self.remove_drink(drink)
         self.add_to_till(drink)
         customer.reduce_wallet(drink.price)
         customer.add_drink(drink)
+
+    def sell_drink_check_age(self, customer, drink):
+        if customer.age >= 18:
+            self.remove_drink(drink)
+            self.add_to_till(drink)
+            customer.reduce_wallet(drink.price)
+            customer.add_drink(drink)

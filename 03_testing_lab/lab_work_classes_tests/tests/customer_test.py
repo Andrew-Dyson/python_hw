@@ -5,7 +5,7 @@ from src.pub import Pub
 
 class TestCustomer(unittest.TestCase):
     def setUp(self):
-        self.customer = Customer("Murray", 50)
+        self.customer = Customer("Murray", 50, 30)
 
     def test_customer_has_name(self):
         self.assertEqual("Murray", self.customer.name)
