@@ -1,0 +1,38 @@
+body {
+    /* background-image: url("Morocco.JPG"); */
+    background-color: rgb(255, 255, 255);
+    font-family: sans-serif;
+  }
+
+h1 {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+header> h1 {
+    font-size: 2rem
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 0.8rem;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: white
+}
+
+nav>ul>li {
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+header {
+    height: 8rem;
+    background-color:  #365846;
+    color: #fff;
+}

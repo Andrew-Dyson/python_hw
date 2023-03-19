@@ -1,0 +1,24 @@
+
+
+<html>
+    <head>
+        <title>{{ title }} - Geological Guides</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <header>
+        <h1>Library Website</h1>
+        <nav>
+            <ul>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="/books">Books</a></li>
+                <li> <a href="/books/addform">Add or Remove a book</a></li>
+            </ul>
+            <nav>
+    </header>
+    <body>
+       
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

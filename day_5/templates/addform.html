@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add or Remove a book</h1>
+<div>
+    <form action="/books" method="post" >
+        <label for="title>">Title</label>
+        <input type = "text" name="title" id="title" placeholder="enter the Title">
+        <label for="author>">Author</label>
+        <input type = "text" name="author" id="author" placeholder="enter the Author">
+        <label for="genre>">Genre</label>
+        <input type = "text" name="genre" id="genre" placeholder="enter the Genre">
+        <input type = "submit" value = "add a book" >
+    </form>
+</div>
+
+
+<div>
+    <form action="/books/<index>" method="post" >
+        <label for="index">Index</label>
+        <input type = "text" name="index" id="index" placeholder="enter the index position of book">
+        <input type = "submit" value = "remove a book">
+    </form>
+</div>
+{% endblock %}

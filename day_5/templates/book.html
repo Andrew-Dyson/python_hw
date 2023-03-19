@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+    <h1> {{book.title}} - Title </h1>
+    <h2>{{book.author}}</h2>
+    <h3>{{book.genre}}</h3>
+    {% if book.checked_out %}              
+        <span> &#10060; - Not Available</span> 
+        {% else %}
+        <span> &#9989; - Available </span>
+            <form action="/books/<index>" method="post" >
+            <input type="radio" id="index" name="index" value="check out book now!">
+            <input type = "submit" value = "check out book now!" >
+            </form>
+      {% endif %}
+</body>
+{% endblock %}

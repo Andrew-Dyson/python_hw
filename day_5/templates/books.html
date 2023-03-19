@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<body>
+   <h1>Books</h1>
+   {% for book in books %}
+   <h2>{{ book.title }}</h2>
+    <h3>{{ book.author }}</h3>
+    <h3>{{ book.genre }}</h3>
+    {% if book.checked_out %}              
+    <span> &#10060; - Not Available</span> 
+    {% else %}
+    <span> &#9989; - Available </span>
+    <!-- <input type="radio" id="check_out" name="check_out" value="check out book now">
+    <label for="check out book now"> Check out book now!</label> -->
+      {% endif %}
+    <a href="/books/{{books.index(book)}}">Show Book</a>
+    {% endfor %}
+</body>
+{% endblock %}
