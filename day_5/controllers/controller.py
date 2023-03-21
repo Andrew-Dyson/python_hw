@@ -45,11 +45,11 @@ def books_addform():
     return render_template("addform.html")
 
 
-# @app.route('/books/<index>', methods=['POST'])
-# def books_delete(index):
-#     index = request.form["index"]
-#     remove_book(int(index))
-#     return redirect("/books")
+@app.route('/books/<index>', methods=['POST'])
+def books_delete(index):
+    index = request.form["index"]
+    remove_book(int(index))
+    return redirect("/books")
 
 # @app.route('/books/<index>', methods=['POST'])
 # def books_delete(index):
